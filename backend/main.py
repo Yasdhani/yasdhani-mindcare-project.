@@ -12,7 +12,10 @@ app = FastAPI(title="MindCare AI")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5174"],
+    allow_origins=[
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://mindcare-ai-frontend-a3c0.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
