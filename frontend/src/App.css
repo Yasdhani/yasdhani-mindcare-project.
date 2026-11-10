@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f7;
+  color: #253b35;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #123d32;
+  color: white;
+  padding: 30px 20px;
+  position: fixed;
+  height: 100vh;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.menu-title {
+  color: #a4c5b9;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.menu {
+  padding: 15px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #d5e7df;
+}
+
+.menu:hover,
+.menu.active {
+  background: #28634f;
+  color: white;
+}
+
+.profile {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  background: #71c69c;
+  padding: 12px 15px;
+  border-radius: 50%;
+  color: #123d32;
+}
+
+.profile p {
+  font-size: 12px;
+  color: #b6d2c6;
+  margin-top: 5px;
+}
+
+.main {
+  margin-left: 250px;
+  padding: 35px;
+  width: calc(100% - 250px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.topbar p {
+  color: #81938c;
+  margin-top: 8px;
+}
+
+.status {
+  color: #24976a;
+  font-size: 13px;
+}
+
+.welcome {
+  background: linear-gradient(120deg, #174b3c, #378b69);
+  color: white;
+  padding: 45px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 270px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #b8e8d0;
+}
+
+.welcome h1 {
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.welcome p {
+  line-height: 1.7;
+  color: #e1f1e9;
+  max-width: 450px;
+}
+
+.welcome button,
+.card button,
+.input-area button {
+  background: #b9efce;
+  color: #174b3c;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.welcome-icon {
+  font-size: 100px;
+}
+
+.section-title {
+  margin: 35px 0 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #00000008;
+}
+
+.card span {
+  font-size: 35px;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+.card p {
+  color: #84938d;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.card button {
+  background: #e1f3e9;
+}
+
+.chat-section {
+  margin-top: 35px;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+}
+
+.chat-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-heading p {
+  color: #81938c;
+  margin-top: 8px;
+}
+
+.chat-box {
+  height: 280px;
+  overflow-y: auto;
+  background: #f7faf8;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.message {
+  padding: 13px 17px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  max-width: 75%;
+  line-height: 1.5;
+}
+
+.bot {
+  background: #e3f3e9;
+  margin-right: auto;
+}
+
+.user {
+  background: #286c53;
+  color: white;
+  margin-left: auto;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #dce8e1;
+  border-radius: 10px;
+  outline: none;
+}
+
+.input-area button {
+  margin: 0;
+  background: #174b3c;
+  color: white;
+}
+
+.disclaimer {
+  font-size: 11px;
+  color: #84938d;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  color: #8a9992;
+  margin: 35px 0 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 190px;
+  }
+
+  .main {
+    margin-left: 190px;
+    width: calc(100% - 190px);
+    padding: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .welcome {
+    padding: 25px;
+  }
+
+  .welcome-icon {
+    display: none;
+  }
+}
+
+.topbar h2,
+.section-title,
+.chat-heading h2 {
+  color: #253b35 !important;
+}
+
+.topbar p {
+  color: #71847b;
+}
