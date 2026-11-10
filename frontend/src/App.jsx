@@ -124,7 +124,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8001/wellness-insights",
+        "https://mindcare-ai-backend-ytyp.onrender.com/wellness-insights",
         {
           method: "POST",
           headers: {
@@ -181,7 +181,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8001/chat", {
+      const response = await fetch("https://mindcare-ai-backend-ytyp.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
